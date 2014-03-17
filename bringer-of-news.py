@@ -57,7 +57,7 @@ def main(loghandle):
                         link = session.submit_link(subreddit, entry.title, entry.link, False)
                         log(loghandle, "Posted \"%s\"" % link)
                     except narwal.exceptions.PostError, e:
-                        log(loghandle, "Couldn't submit link: %s (%s)" % (entry.title, e))
+                        log(loghandle, "Couldn't submit link: %s (%s)" % (entry.title, e.errors))
                         
         last_checked = datetime.utcnow()
         log(loghandle, "Sleeping %d second(s)." % pause_time)
