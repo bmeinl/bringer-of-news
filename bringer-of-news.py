@@ -47,7 +47,9 @@ def main(loghandle):
                 break
             for entry in d.entries:
                 # skip entries with empty fields, as that problem popped up recently
-                if not entry.title or entry.link: break
+                if not(entry.title) or not(entry.link):
+                        print "Skipping entry from '%s' because of empty fields." % feed
+                        break
 
                 # if the entry is newer than when we last checked ...
                 if entry.published_parsed >= last_checked.timetuple():
@@ -55,7 +57,7 @@ def main(loghandle):
                         link = session.submit_link(subreddit, entry.title, entry.link, False)
                         log(loghandle, "Posted \"%s\"" % link)
                     except narwal.exceptions.PostError, e:
-                        log(loghandle, "Couldn't submit link: %s (%s)" % (entry.title, e)
+                        log(loghandle, "Couldn't submit link: %s (%s)" % (entry.title, e))
                         
         last_checked = datetime.utcnow()
         log(loghandle, "Sleeping %d second(s)." % pause_time)
