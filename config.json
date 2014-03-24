@@ -1,14 +1,15 @@
 {
   "bringer-of-news": {
-    "username": "some_username",
-    "password": "some_password",
-    "subreddit": "some_subreddit",
+    "user_name": "bringer-of-news",
+    "password": "xxxxxxx",
+    "subreddit": "changethis",
+    "pause_time": 20,
+    "log_file": "bringer-of-news.log",
     "feeds": [
-        "http://feed1.com/rss.rss",
-        "http://feed2.com/rss.rss",
-        "http://feed3.com/rss.rss",
-        "http://feed4.com/rss.rss",
-        "http://feed5.com/rss.rss"
+        "http:/some.com/index.rss",
+        "http:/websites.org/index.rss",
+        "http:/go.org/feed",
+        "http:/here.net/index.rss"
     ]
   },
   "weekly-videos": {

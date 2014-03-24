@@ -46,6 +46,10 @@ if __name__ == "__main__":
         config_file = "config.json"
 
     with io.open(config_file) as f:
-        config = json.load(f)
+        try:
+            config = json.load(f)
+        except ValueError:
+            print "Something is wrong with your config: %s" % config_file
+            sys.exit(0)
 
     main(config["weekly-videos"])

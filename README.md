@@ -6,15 +6,17 @@ Both scripts are configured via JSON file that you optionally specify as command
 
 ## bringer-of-news.py
 
-Continuously checks feeds and submits new entries to a subreddit.
+Continuously checks feeds and submits new entries to a subreddit.  
 Default config file is `config.json`.  
+
     Usage: bringer-of-news.py [config]
 
 
 ## weekly-videos.py
 
-Aggregates videos of YouTube channels into a single, ready to submit MarkDown file.
+Aggregates videos of YouTube channels into a single, ready to submit MarkDown file.  
 Default config file is `config.json`.  
+
     Usage: weekly-videos.py [config]
 
 
