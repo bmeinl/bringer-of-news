@@ -1,0 +1,32 @@
+{
+  "bringer-of-news": {
+    "username": "some_username",
+    "password": "some_password",
+    "subreddit": "some_subreddit",
+    "feeds": [
+        "http://feed1.com/rss.rss",
+        "http://feed2.com/rss.rss",
+        "http://feed3.com/rss.rss",
+        "http://feed4.com/rss.rss",
+        "http://feed5.com/rss.rss"
+    ]
+  },
+  "weekly-videos": {
+    "template": "./template.md",
+    "outfile": "./output.md",
+    "channels": [
+      {
+        "title": "UltraChenTV",
+        "comment": "UltraDavid's and James Chen's channel, hosting shows such as First Attack, etc."
+      },
+      {
+        "title": "YogaFlame24",
+        "comment": "Uploads a ton of high-level play"
+      },
+      {
+        "title": "FGCSabin",
+        "comment": "Arturo's channel I guess, there's probably some East Coast stuff here"
+      }
+    ]
+  }
+}
