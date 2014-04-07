@@ -12,7 +12,7 @@ BOT_COMMENT = """
 This link was submitted by /u/{user_name}, a bot to update a subreddit from various RSS feeds.  
 If this is a recent submission, **it will be removed once the score reaches {deletion_score}**.
 For questions or suggestions, please contact one of the moderators listed on the sidebar.
----
+*****
 Feel free to check out the source [on GitHub](https://github.com/bmeinl/bringer-of-news).
 """
 
