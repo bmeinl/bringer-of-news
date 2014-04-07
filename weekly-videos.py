@@ -35,7 +35,7 @@ def main(config):
     today = datetime.today()
     datestring = "{} {}".format(calendar.month_name[today.month], today.day)
 
-    with io.open(config["outfile"], 'w') as f:
+    with io.open(config["outfile"], 'w', encoding="utf-8") as f:
         f.write(template.render(channels=[read_channel(c) for c in channels],
             datestring=datestring))
 
@@ -45,11 +45,11 @@ if __name__ == "__main__":
     except IndexError:
         config_file = "config.json"
 
-    with io.open(config_file) as f:
+    with io.open(config_file, 'r', encoding="utf-8") as f:
         try:
             config = json.load(f)
         except ValueError:
-            print "Something is wrong with your config: %s" % config_file
+            print "Something is wrong with your config: {}".format(config_file)
             sys.exit(0)
 
     main(config["weekly-videos"])
