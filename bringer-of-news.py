@@ -9,8 +9,8 @@ import sys
 from collections import deque
 
 BOT_COMMENT = """
-This link was submitted by /u/%s, a bot to update a subreddit from various RSS feeds.  
-If this is a recent submission, **it will be removed once the score reaches %d**.
+This link was submitted by /u/{user_name}, a bot to update a subreddit from various RSS feeds.  
+If this is a recent submission, **it will be removed once the score reaches {deletion_score}**.
 For questions or suggestions, please contact one of the moderators listed on the sidebar.
 ---
 Feel free to check out the source [on GitHub](https://github.com/bmeinl/bringer-of-news).
@@ -65,7 +65,7 @@ def main(loghandle, config):
                         if len(last_links) > config["links_remembered"]: last_links.popleft()
                         # we need this because the comment method has an ugly random print statement in it ...
                         sys.stdout = NullIO()
-                        link.comment(BOT_COMMENT % (config["user_name"], config["deletion_score"]))
+                        link.comment(BOT_COMMENT.format(**config))
                         sys.stdout = sys.__stdout__
                     except narwal.exceptions.PostError, e:
                         log(loghandle, "Couldn't submit link: %s (%s)" % (entry.title, e.errors))
