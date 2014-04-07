@@ -1,15 +1,16 @@
 {
   "bringer-of-news": {
     "user_name": "bringer-of-news",
-    "password": "xxxxxxx",
-    "subreddit": "changethis",
+    "password": "xxxxxx",
+    "subreddit": "editthiskk",
     "pause_time": 20,
     "log_file": "bringer-of-news.log",
+    "links_remembered": 20,
+    "deletion_score": 0,
     "feeds": [
-        "http:/some.com/index.rss",
-        "http:/websites.org/index.rss",
-        "http:/go.org/feed",
-        "http:/here.net/index.rss"
+        "http://please/index.rss",
+        "http://edit/index.rss",
+        "http://this/index.rss"
     ]
   },
   "weekly-videos": {
